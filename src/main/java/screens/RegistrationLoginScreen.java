@@ -1,4 +1,31 @@
 package screens;
 
-public class RegistrationLoginScreen {
+import dto.UserLombok;
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.WebElement;
+
+public class RegistrationLoginScreen extends BaseScreen{
+    public RegistrationLoginScreen(AppiumDriver driver) {
+        super(driver);
+    }
+
+    @AndroidFindBy(id = "com.sheygam.contactapp:id/inputEmail")
+    WebElement inputEmail;
+    @AndroidFindBy(id = "com.sheygam.contactapp:id/inputPassword")
+    WebElement inputPassword;
+    @AndroidFindBy(id = "com.sheygam.contactapp:id/regBtn")
+    WebElement btnRegistration;
+    @AndroidFindBy(id = "com.sheygam.contactapp:id/loginBtn")
+    WebElement btnLogin;
+
+    public void typeFormLoginRegistration(UserLombok userLombok){
+        inputEmail.sendKeys(userLombok.getUsername());
+        inputPassword.sendKeys(userLombok.getPassword());
+    }
+
+    public void clickBtnRegistration(){
+        clickWait(btnRegistration);
+    }
+
 }
