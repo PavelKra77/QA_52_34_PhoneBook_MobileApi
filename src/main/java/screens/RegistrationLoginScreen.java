@@ -28,4 +28,8 @@ public class RegistrationLoginScreen extends BaseScreen{
         clickWait(btnRegistration);
     }
 
+    public void clickBtnLogin(){
+        clickWait(btnLogin);
+    }
+
 }
