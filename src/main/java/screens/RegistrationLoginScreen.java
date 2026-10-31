@@ -1,11 +1,12 @@
 package screens;
 
+
 import dto.UserLombok;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.openqa.selenium.WebElement;
 
-public class RegistrationLoginScreen extends BaseScreen{
+public class RegistrationLoginScreen extends BaseScreen {
     public RegistrationLoginScreen(AppiumDriver driver) {
         super(driver);
     }
@@ -31,5 +32,4 @@ public class RegistrationLoginScreen extends BaseScreen{
     public void clickBtnLogin(){
         clickWait(btnLogin);
     }
-
 }
